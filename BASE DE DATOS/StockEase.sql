@@ -107,3 +107,8 @@ CREATE TABLE ProductCategories (
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
 -- Comentario: Esta tabla permite establecer relaciones múltiples entre productos y categorías.
+SELECT * FROM Usuarios;
+SELECT * FROM Categorias;
+SELECT * FROM Productos;
+SELECT * FROM MovimientosInventario;
+SELECT * FROM Reportes;
