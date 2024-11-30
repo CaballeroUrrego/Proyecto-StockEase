@@ -1,12 +1,43 @@
-CREATE DATABASE Proyecto_StockEase ;
-use  Proyecto_StockEase  ;
 -- Crear la base de datos
 CREATE DATABASE Proyecto_StockEase;
 GO
 
+
 -- Usar la base de datos creada
 USE Proyecto_StockEase;
 GO
+
+-- Crear roles
+CREATE ROLE Administrador;
+CREATE ROLE Empleado;
+
+-- Comentario: Los roles Administrador y Empleado representan los distintos niveles de acceso en el sistema StockEase.
+
+-- Otorgar privilegios a los roles
+GRANT SELECT, INSERT, UPDATE, DELETE TO Administrador;
+GRANT SELECT, INSERT, UPDATE, DELETE TO Empleado;
+
+-- Comentario: Se otorgan los mismos privilegios básicos de selección, inserción, actualización y eliminación para ambos roles.
+
+-- Otorgar privilegios adicionales al rol Administrador
+GRANT CREATE USER TO Administrador;
+GRANT CREATE TABLE TO Administrador;
+GRANT CREATE VIEW TO Administrador;
+GRANT CREATE PROCEDURE TO Administrador;
+
+-- Comentario: El rol Administrador obtiene privilegios adicionales para gestionar usuarios, tablas, vistas y procedimientos almacenados.
+
+-- Otorgar privilegios específicos del inventario al rol Empleado
+GRANT SELECT ON Products TO Empleado;
+GRANT SELECT ON InventoryMovements TO Empleado;
+
+-- Comentario: Se otorgan permisos de selección en las tablas de Productos e InventoryMovements al rol Empleado para que pueda consultar información del inventario.
+
+-- Otorgar permisos de reportes a ambos roles
+GRANT SELECT ON Reports TO Administrador;
+GRANT SELECT ON Reports TO Empleado;
+
+-- Comentario: Se otorgan permisos de selección en la tabla de Reportes tanto al Administrador como al Empleado.
 
 -- Crear la tabla de Usuarios
 CREATE TABLE Users (
