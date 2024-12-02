@@ -1,9 +1,4 @@
 -- Crear la base de datos StockEase
-CREATE DATABASE StockEase; -- Se crea una nueva base de datos llamada StockEase
-GO
-
-USE StockEase; -- Cambiar el contexto a la base de datos StockEase
-GO
 
 -- Tabla de Roles: Almacena los diferentes roles de usuario
 CREATE TABLE Roles (

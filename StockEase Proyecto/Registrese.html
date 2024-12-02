@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockEase - Registro</title>
+    <link rel="icon" href="img/LogoStockEase.svg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assents/css/FormularioRegistro.css">
+</head>
+<body>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <!-- Card principal -->
+    <div class="card p-4" style="width: 100%; max-width: 400px;">
+        <!-- Icono y Título -->
+        <div class="text-center">
+            <img src="/assents/logo/LogoStockEase.svg" alt="Logo StockEase" class="img-fluid mb-3" style="width: 80px;">
+            <h2 class="mb-4">Regístrate</h2>
+        </div>
+
+        <!-- Formulario -->
+        <form>
+            <!-- Correo Electrónico -->
+            <div class="mb-3">
+                <label for="email" class="form-label">
+                    <i class="fas fa-envelope"></i> Email
+                </label>
+                <input type="email" id="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+            </div>
+
+            <!-- Nombre -->
+            <div class="mb-3">
+                <label for="nombre" class="form-label">
+                    <i class="fas fa-user"></i> Nombre
+                </label>
+                <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre">
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-3">
+                <label for="password" class="form-label">
+                    <i class="fas fa-lock"></i> Contraseña
+                </label>
+                <input type="password" id="password" class="form-control" placeholder="Ingresa tu contraseña">
+            </div>
+
+            <!-- Confirmar Contraseña -->
+            <div class="mb-3">
+                <label for="confirm-password" class="form-label">
+                    <i class="fas fa-lock"></i> Confirmar Contraseña
+                </label>
+                <input type="password" id="confirm-password" class="form-control" placeholder="Confirma tu contraseña">
+            </div>
+
+            <!-- Roles -->
+            <div class="d-flex justify-content-center mb-4">
+                <button type="button" class="btn role-btn">Administrador</button>
+                <button type="button" class="btn role-btn">Empleado</button>
+                <button type="button" class="btn role-btn">Proveedor</button>
+            </div>
+
+            <!-- Botón de registro -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary py-2">Regístrate</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

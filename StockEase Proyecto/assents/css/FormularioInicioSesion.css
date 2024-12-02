@@ -1,0 +1,49 @@
+/* Estilos personalizados para el formulario */
+body {
+    background: linear-gradient(to top, #f3f4f6, #ffffff);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.card {
+    background: #fff;
+    border: none;
+}
+
+/* Título principal */
+h1 {
+    color: #7e57c2;
+    font-weight: bold;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #7e57c2;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #5e3fa4;
+}
+
+.btn-outline-primary {
+    color: #7e57c2;
+    border-color: #7e57c2;
+}
+
+.btn-outline-primary:hover {
+    background-color: #7e57c2;
+    color: #fff;
+}
+
+/* Enlace de contraseña olvidada */
+.text-muted {
+    font-size: 0.9rem;
+}
+
