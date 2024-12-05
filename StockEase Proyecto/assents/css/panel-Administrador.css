@@ -1,0 +1,42 @@
+/* Gradiente para encabezado */
+.bg-gradient {
+    background: linear-gradient(90deg, #6f42c1, #5a369e);
+}
+
+/* Color uniforme para los íconos */
+.text-icon {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Botones */
+.btn-primary {
+    background: #6f42c1;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #5a369e;
+}
+
+/* Título */
+.titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff; /* Azul */
+}
+
+/* Pie de página (opcional para diseño fijo) */
+
+footer {
+    background: #343a40;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0; 
+    width: 100%;
+}
+

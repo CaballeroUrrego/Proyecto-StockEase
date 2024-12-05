@@ -1,0 +1,46 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+#header {
+    background: linear-gradient(to bottom, #7e57c2, #5e3fa4);
+    color: #fff;
+    padding: 5rem 0;
+}
+
+#header h1 span {
+    color: #ffca28;
+}
+
+/* Características */
+#features .text-primary {
+    color: #7e57c2 !important;
+}
+
+/* Testimonios */
+.testimonial {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+}
+
+/* Formulario */
+form .form-control {
+    border-radius: 5px;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #7e57c2;
+    border: none;
+    border-radius: 30px;
+}
+
+.btn-primary:hover {
+    background-color: #5e3fa4;
+}

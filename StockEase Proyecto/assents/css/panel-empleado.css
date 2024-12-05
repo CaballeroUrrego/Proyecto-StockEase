@@ -1,0 +1,62 @@
+/* Gradiente para encabezado */
+.bg-gradient {
+    background: linear-gradient(90deg, #6f42c1, #5a369e);
+}
+
+/* Color uniforme para los íconos */
+.text-icon {
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* Estilo para el título */
+.titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff; /* Azul */
+    margin-bottom: 30px;
+}
+
+/* Botones personalizados */
+.btn-primary {
+    background: #6f42c1;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.btn-primary:hover {
+    background: #5a369e;
+}
+
+/* Estilo del pie de página */
+.footer {
+    background: #343a40;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Asegurarse de que los botones se vean bien en móviles */
+@media (max-width: 768px) {
+    .btn-primary {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+/* Estilo para centrar el título */
+.titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2.5rem; /* Ajusta el tamaño de la fuente */
+    color: #6f42c1; /* Cambia el color del texto a púrpura (como el tema) */
+    margin: 0; /* Elimina el margen alrededor del título */
+}
+
