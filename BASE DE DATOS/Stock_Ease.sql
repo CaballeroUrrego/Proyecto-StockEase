@@ -115,6 +115,25 @@
 ------    cantidad INT NOT NULL,
 ------    FOREIGN KEY (carrito_id) REFERENCES Carrito(id),
 ----    FOREIGN KEY (producto_id) REFERENCES Producto(id)
+--);
+
+
+-- Agregar la columna 'correoElectronico' (tipo VARCHAR para almacenar direcciones de correo)
+--ALTER TABLE Cliente
+--ADD correoElectronico VARCHAR(100);
+
+---- Agregar la columna 'sexo' (tipo VARCHAR con restricciones para 'Masculino' o 'Femenino')
+--ALTER TABLE Cliente
+--ADD sexo VARCHAR(10) CHECK (sexo IN ('Masculino', 'Femenino'));
+
+--select *from Cliente
+
+
+CREATE TABLE Administrador (
+    id INT PRIMARY KEY IDENTITY(1,1),  -- ID único para cada administrador, auto incrementable
+    nombre VARCHAR(100) NOT NULL,       -- Nombre del administrador
+    correoElectronico VARCHAR(100) UNIQUE NOT NULL, -- Correo electrónico del administrador
+    contrasena VARCHAR(255) NOT NULL    -- Contraseña del administrador (guardada en formato seguro)
 );
 
 
@@ -122,14 +141,8 @@
 
 
 
--- Ver todos los registros de la tabla 'Cliente'
-SELECT * FROM Cliente;
-EXEC sp_columns Cliente;
 
 
-
-
-select *from cliente
 
 
 
