@@ -1,6 +1,6 @@
 /* Gradiente para encabezado */
 .bg-gradient {
-    background: linear-gradient(90deg, #6f42c1, #5a369e);
+    background: linear-gradient(90deg, #5500f3, #5a369e);
 }
 
 /* Color uniforme para los íconos */
@@ -13,7 +13,7 @@
 .titulo {
     font-size: 2rem;
     font-weight: bold;
-    color: #007bff; /* Azul */
+    color: #3c99fb; /* Azul */
     margin-bottom: 30px;
 }
 
@@ -56,7 +56,7 @@
 .titulo {
     text-align: center; /* Centra el texto horizontalmente */
     font-size: 2.5rem; /* Ajusta el tamaño de la fuente */
-    color: #6f42c1; /* Cambia el color del texto a púrpura (como el tema) */
+    color: #3a1a76; /* Cambia el color del texto a púrpura (como el tema) */
     margin: 0; /* Elimina el margen alrededor del título */
 }
 
