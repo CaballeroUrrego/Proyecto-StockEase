@@ -48,3 +48,28 @@ h1, h2 {
 .role-btn:hover {
     background-color: #d9d9d9;
 }
+
+
+/* Estilo para el botón seleccionado */
+.btn-selected-admin {
+    background-color: #7e57c2; /* Color para Administrador */
+    color: white;
+  }
+  
+  .btn-selected-empleado {
+    background-color: #7e57c2; /* Color para Empleado */
+    color: white;
+  }
+  
+  .btn-selected-proveedor {
+    background-color: #7e57c2; /* Color para Proveedor */
+    color: white;
+  }
+
+/* Media query para dispositivos móviles */
+@media (max-width: 600px) {
+    .role-btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
