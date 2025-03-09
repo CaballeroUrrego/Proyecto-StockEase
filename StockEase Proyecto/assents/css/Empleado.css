@@ -1,39 +1,76 @@
 /* Estilos personalizados */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-  }
-  
-
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
 
 /* Estilos personalizados para el navbar morado */
 .navbar.bg-dark {
   background-color: #6f42c1 !important; /* Color morado */
 }
 
+.navbar {
+  margin-bottom: 20px;
+}
 
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
 
-  .navbar {
-    margin-bottom: 20px;
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.card-text {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+/* Estilo para la barra lateral */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0; /* Cambiado de left a right */
+  background-color: #343a40;
+  padding-top: 20px;
+  transition: right 0.3s; /* Cambiado de left a right */
+}
+
+.sidebar .nav-link {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    right: -100%; /* Cambiado de left a right */
   }
-  
-  .card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+
+  .sidebar.show {
+    right: 0; /* Cambiado de left a right */
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    color: #333;
-  }
-  
-  .card-text {
-    font-size: 2.5rem;
-    color: #007bff;
-  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}

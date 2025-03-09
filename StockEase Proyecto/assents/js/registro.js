@@ -53,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
+    // Almacena el nombre en localStorage
+    localStorage.setItem('nombreUsuario', nombre);
+
     // Redirige al usuario a la página correspondiente según el rol seleccionado
     if (selectedRole === 'admin') {
       window.location.href = '/html/prueba-Admin.html';
