@@ -3,122 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <!-- Bootstrap CSS -->
+  <title>Dashboard de Empleado</title>
+  <link rel="icon" href="/assents/logo/LogoStockEase.svg" />
+  <!-- Enlace a Bootstrap CSS para estilos y diseño responsivo -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- FontAwesome CSS -->
+  <!-- Enlace a FontAwesome CSS para iconos -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="icon" href="/assents/logo/LogoStockEase.svg">
-
+  <!-- Enlace a la hoja de estilo personalizada -->
   <link rel="stylesheet" href="/assents/css/Empleado.css">
+
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#" id="nombreUsuario"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="fas fa-home"></i> Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pruebas/Consultar inventario.html"><i class="fas fa-box"></i> Consultar Inventario</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-plus"></i> Registrar Producto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-search"></i> Consultar Pedido</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Generar Reporte</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-dollar-sign"></i> Actualizar Precios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-address-book"></i> Contactos</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <nav class="navbar">
+    <!-- Título de la barra de navegación -->
+    <div class="navbar-brand">Empleado</div>
+    <!-- Botón del menú hamburguesa para mostrar/ocultar el sidebar -->
+    <button class="navbar-toggler" id="toggleSidebar" title="Toggle Sidebar">
+      <i class="fas fa-bars"></i>
+    </button>
   </nav>
 
-  <!-- Dashboard -->
-  <div class="container mt-5">
-    <h1 class="text-center mb-4">Dashboard</h1>
-    <div class="row">
-      <!-- Productos Vendidos -->
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-chart-line"></i> Productos Vendidos</h5>
-            <p class="card-text display-4">40,689</p>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h4>Menú</h4>
+    <div class="text-center mb-4">
+      <!-- Imagen de perfil -->
+      <img src="/assents/image/perfil.png" alt="Perfil" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+      <!-- Nombre del usuario -->
+      <div id="nombreUsuario" class="mt-2"></div>
+    </div>
+    <ul>
+      <!-- Enlaces de navegación del sidebar -->
+      <a class="nav-link" href="/html/inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+      <a class="nav-link" href="/pruebas/Consultar inventario.html"><i class="fas fa-box"></i> Consultar Inventario</a></li>
+      <a class="nav-link" href="#"><i class="fas fa-plus"></i> Registrar Producto</a></li>
+      <a class="nav-link" href="#"><i class="fas fa-search"></i> Consultar Pedido</a></li>
+      <a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Generar Reporte</a></li>
+      <a class="nav-link" href="#"><i class="fas fa-dollar-sign"></i> Actualizar Precios</a></li>
+      <a class="nav-link" href="#"><i class="fas fa-address-book"></i> Contactos </a></li>
+    </ul>
+  </div>
+
+  <!-- Contenido Principal -->
+  <div class="content" id="content">
+    <div class="container mt-5">
+      <!-- Título del dashboard -->
+      <h1 class="text-center mb-4">Dashboard</h1>
+      <div class="row">
+        <!-- Tarjeta de Productos Vendidos -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-chart-line"></i> Productos Vendidos</h5>
+              <p class="card-text display-4">40,689</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Pedidos Recientes -->
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-shopping-cart"></i> Pedidos Recientes</h5>
-            <p class="card-text display-4">0.00</p>
+        <!-- Tarjeta de Pedidos Recientes -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-shopping-cart"></i> Pedidos Recientes</h5>
+              <p class="card-text display-4">0.00</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Deportaciones de Clientes -->
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-users"></i> Deportaciones de Clientes</h5>
-            <p class="card-text display-4">0.00</p>
+        <!-- Tarjeta de Devoluciones de Clientes -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-users"></i> Devoluciones de Clientes</h5>
+              <p class="card-text display-4">0.00</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Bajo Stock -->
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-exclamation-triangle"></i> Bajo Stock</h5>
-            <p class="card-text display-4">0.00</p>
+        <!-- Tarjeta de Bajo Stock -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-exclamation-triangle"></i> Bajo Stock</h5>
+              <p class="card-text display-4">0.00</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Total Productos -->
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-boxes"></i> Total Productos</h5>
-            <p class="card-text display-4">159</p>
+        <!-- Tarjeta de Total Productos -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-boxes"></i> Total Productos</h5>
+              <p class="card-text display-4">159</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Clientes con Ventas -->
-      <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-user-check"></i> Clientes con Ventas</h5>
-            <p class="card-text display-4">2040</p>
+        <!-- Tarjeta de Clientes con Ventas -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-user-check"></i> Clientes con Ventas</h5>
+              <p class="card-text display-4">2040</p>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta de Pedidos Recientes (Duplicado) -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-exclamation-triangle"></i> Pedidos Recientes</h5>
+              <p class="card-text display-4">0.00</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
+
+
+  <script src="/assents/js/empleado.js"></script>
+  <!-- Script para mostrar/ocultar sidebar y mostrar el nombre del usuario -->
   <script>
-    // Recupera el nombre del usuario desde localStorage y lo muestra en la navbar
-    document.addEventListener('DOMContentLoaded', function () {
-      const nombreUsuario = localStorage.getItem('nombreUsuario');
-      if (nombreUsuario) {
-        document.getElementById('nombreUsuario').textContent = nombreUsuario;
+    // Selecciona los elementos del DOM
+    const toggleSidebar = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const nombreUsuario = document.getElementById('nombreUsuario');
+
+    // Añade un evento de clic al botón del menú hamburguesa
+    toggleSidebar.addEventListener('click', () => {
+      // Alterna la clase 'show' en el sidebar para mostrar/ocultar
+      sidebar.classList.toggle('show');
+      // Alterna la clase 'shift' en el contenido principal para ajustar el margen
+      content.classList.toggle('shift');
+    });
+
+    // Recupera el nombre del usuario desde localStorage y lo muestra en el navbar
+    document.addEventListener('DOMContentLoaded', () => {
+      const nombre = localStorage.getItem('nombreUsuario');
+      if (nombre) {
+        nombreUsuario.textContent = nombre;
       }
     });
   </script>

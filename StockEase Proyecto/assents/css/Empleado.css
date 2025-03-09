@@ -1,27 +1,104 @@
 /* Estilos personalizados */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  font-family: Arial, sans-serif; /* Fuente sans-serif para el cuerpo */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  margin: 0;
+  padding: 0;
 }
 
 /* Estilos personalizados para el navbar morado */
-.navbar.bg-dark {
-  background-color: #6f42c1 !important; /* Color morado */
+.navbar {
+  background-color: #6f42c1; /* Color morado para el navbar */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el navbar esté siempre visible */
 }
 
-.navbar {
+
+.Boton1{
+  background-color: #6f42c1;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001; /* Asegura que el botón esté por encima del sidebar */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #6f42c1; /* Color oscuro para el sidebar */
+  position: fixed;
+  top: 0;
+  left: -250px; /* Ocultar sidebar por defecto */
+  transition: left 0.3s; /* Transición suave para mostrar/ocultar */
+  padding-top: 70px; /* Ajuste para el navbar */
+  z-index: 999; /* Asegura que el sidebar esté por debajo del navbar */
+}
+
+.sidebar.show {
+  left: 0; /* Mostrar sidebar */
+}
+
+.sidebar h4 {
+  color: white;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.card {
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+.sidebar .nav-link {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.sidebar .nav-link:hover {
+  background-color: #495057; /* Color de fondo al pasar el mouse */
+  border-radius: 5px;
+}
+
+/* Contenido Principal */
+.content {
+  margin-left: 0; /* Sin margen en móviles */
+  padding: 20px;
+  padding-top: 70px; /* Ajuste para el navbar */
+  transition: margin-left 0.3s; /* Transición suave para el margen */
+}
+
+.content.shift {
+  margin-left: 250px; /* Desplazar contenido cuando el sidebar está visible */
+  width: calc(100% - 250px); /* Reducir el ancho del contenido */
+}
+
+/* Tarjetas */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .card-title {
@@ -34,43 +111,35 @@ body {
   color: #007bff;
 }
 
-/* Estilo para la barra lateral */
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0; /* Cambiado de left a right */
-  background-color: #343a40;
-  padding-top: 20px;
-  transition: right 0.3s; /* Cambiado de left a right */
-}
-
-.sidebar .nav-link {
-  font-size: 1.1rem;
-  padding: 10px 20px;
-}
-
-.sidebar .nav-link:hover {
-  background-color: #495057;
-  border-radius: 5px;
-}
-
+/* Media Queries */
 @media (max-width: 768px) {
   .sidebar {
-    width: 100%;
-    right: -100%; /* Cambiado de left a right */
+    width: 100%; /* Ocupar toda la pantalla en móviles */
+    left: -100%; /* Ocultar sidebar por defecto */
   }
 
   .sidebar.show {
-    right: 0; /* Cambiado de left a right */
+    left: 0; /* Mostrar sidebar en móviles */
+  }
+
+  .content {
+    margin-left: 0; /* Sin margen en móviles */
+    width: 100%; /* Ancho completo en móviles */
   }
 }
 
-.navbar-toggler {
-  border: none;
-}
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+@media (min-width: 768px) {
+  .sidebar {
+    left: 0; /* Mostrar sidebar en pantallas grandes */
+  }
+
+  .content {
+    margin-left: 250px; /* Desplazar contenido en pantallas grandes */
+    width: calc(100% - 250px); /* Reducir el ancho del contenido */
+  }
+
+  .navbar-toggler {
+    display: none; /* Ocultar botón en pantallas grandes */
+  }
 }

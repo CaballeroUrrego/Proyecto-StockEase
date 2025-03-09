@@ -1,0 +1,283 @@
+/* Estilos personalizados */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+  
+  /* Navbar */
+  .navbar {
+    background-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #6f42c1;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s;
+    padding-top: 70px;
+    z-index: 999;
+  }
+  
+  .sidebar.show {
+    left: 0;
+  }
+  
+  .sidebar h4 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .nav-link {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+  }
+  
+  /* Contenido Principal */
+  .content {
+    margin-left: 0;
+    padding: 20px;
+    padding-top: 70px;
+    transition: margin-left 0.3s;
+  }
+  
+  .content.shift {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+  
+  /* Estilos para la tabla */
+  .table-responsive {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+  }
+  
+  /* Encabezado de la tabla */
+  .table-header {
+    background-color: #6f42c1;
+    color: white;
+  }
+  
+  .table-header th {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  /* Efecto hover en las filas */
+  .table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Botones de acciones */
+  .btn-edit {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-edit:hover {
+    background-color: #218838;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  /* Alineación de los botones */
+  td {
+    white-space: nowrap;
+  }
+  
+  .container-input {
+    position: relative;
+  }
+  
+  .input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
+  
+  /* Media Queries Mejoradas */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      left: -100%;
+    }
+  
+    .sidebar.show {
+      left: 0;
+    }
+  
+    .content {
+      margin-left: 0;
+      width: 100%;
+      padding: 20px 10px;
+    }
+  
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .table-responsive {
+      overflow-x: auto;
+    }
+  
+    .table th,
+    .table td {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .btn-edit,
+    .btn-delete {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .sidebar {
+      width: 250px;
+      left: 0;
+    }
+  
+    .content {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+      padding: 20px;
+    }
+  
+    .navbar-toggler {
+      display: none;
+    }
+  
+    .table th,
+    .table td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .btn-edit,
+    .btn-delete {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .sidebar {
+      width: 250px;
+      left: 0;
+    }
+  
+    .content {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+      padding: 20px;
+    }
+  
+    .navbar-toggler {
+      display: none;
+    }
+  
+    .table th,
+    .table td {
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    .btn-edit,
+    .btn-delete {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  }
+  
