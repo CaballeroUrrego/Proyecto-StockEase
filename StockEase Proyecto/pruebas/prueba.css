@@ -1,0 +1,82 @@
+/* Estilos para el formulario de registro de producto */
+.form-registro {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(155, 41, 41);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: #6f42c1; /* Color morado */
+    outline: none;
+  }
+  
+  .form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+  }
+  
+  .form-group button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .form-group button:hover {
+    background-color: #218838; /* Verde más oscuro */
+    transform: translateY(-2px); /* Efecto de elevación */
+  }
+  
+  .form-group button:active {
+    transform: translateY(0); /* Efecto de presionado */
+  }
+  
+  /* Media Queries para el formulario */
+  @media (max-width: 768px) {
+    .form-registro {
+      padding: 15px;
+    }
+  
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .form-group button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
