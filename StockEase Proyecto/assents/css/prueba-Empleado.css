@@ -6,12 +6,12 @@ body {
   padding: 0;
 }
 
-/* Navbar */
+/* 🔹 Navbar (solo en móviles) */
 .navbar {
   background-color: #6f42c1;
   color: white;
   padding: 10px 20px;
-  display: flex;
+  display: none; /* Ocultar en escritorio */
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -25,7 +25,7 @@ body {
   font-weight: bold;
 }
 
-/* 🔹 Menú hamburguesa (oculto en escritorio) */
+/* 🔹 Menú hamburguesa (solo en móviles) */
 .navbar-toggler {
   background: none;
   border: none;
@@ -33,17 +33,17 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 1001;
-  display: none; /* Se oculta por defecto */
+  display: none; /* Oculto en escritorio */
 }
 
-/* Sidebar */
+/* 🔹 Sidebar (siempre visible en escritorio) */
 .sidebar {
   width: 250px;
   height: 100vh;
   background-color: #6f42c1;
   position: fixed;
   top: 0;
-  left: 0; /* Siempre visible en escritorio */
+  left: 0;
   padding-top: 70px;
   z-index: 999;
 }
@@ -66,15 +66,15 @@ body {
   border-radius: 5px;
 }
 
-/* Contenido Principal */
+/* 🔹 Contenido Principal */
 .content {
-  margin-left: 250px; /* Se ajusta para escritorio */
+  margin-left: 250px;
   padding: 20px;
   padding-top: 70px;
   transition: margin-left 0.3s;
 }
 
-/* Formulario */
+/* 🔹 Formulario */
 form {
   background: white;
   padding: 20px;
@@ -82,7 +82,7 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Botón */
+/* 🔹 Botón */
 .btn-primary {
   background-color: #6f42c1;
   border: none;
@@ -94,6 +94,10 @@ form {
 
 /* 🔹 Configuración para móviles */
 @media (max-width: 1024px) {
+  .navbar {
+    display: flex; /* Mostrar navbar en móviles */
+  }
+
   .navbar-toggler {
     display: block; /* Se muestra el botón hamburguesa en móviles */
   }
@@ -115,8 +119,12 @@ form {
 
 /* 🔹 Configuración para escritorio */
 @media (min-width: 1025px) {
+  .navbar {
+    display: none; /* Ocultar navbar en escritorio */
+  }
+
   .navbar-toggler {
-    display: none; /* Se oculta el botón hamburguesa en escritorio */
+    display: none; /* Ocultar botón hamburguesa en escritorio */
   }
 
   .sidebar {
@@ -127,4 +135,19 @@ form {
   .content {
     margin-left: 250px; /* Se mantiene desplazado */
   }
+}
+
+
+ /* 🔹 Estilos para centrar el logo */
+ .logo-container {
+  display: flex;  /* Usa flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Asegura que la imagen esté arriba del título */
+  margin-bottom: 10px; /* Espacio entre el logo y el título */
+}
+
+.logo-container img {
+  width: 100px;  /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
 }

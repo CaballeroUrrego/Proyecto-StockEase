@@ -6,58 +6,40 @@ body {
   padding: 0;
 }
 
-/* Estilos personalizados para el navbar morado */
+/* 🔹 Navbar (solo en móviles) */
 .navbar {
-  background-color: #6f42c1; /* Color morado para el navbar */
+  background-color: #6f42c1; /* Color morado */
   color: white;
   padding: 10px 20px;
-  display: flex;
+  display: none; /* Ocultar en escritorio */
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que el navbar esté siempre visible */
+  z-index: 1000;
 }
 
-
-.Boton1{
-  background-color: #6f42c1;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: block;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
+/* Botón dentro del navbar */
 .navbar-toggler {
   background: none;
   border: none;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  z-index: 1001; /* Asegura que el botón esté por encima del sidebar */
+  z-index: 1001;
 }
 
-/* Sidebar */
+/* 🔹 Sidebar (siempre visible en escritorio) */
 .sidebar {
   width: 250px;
   height: 100vh;
-  background-color: #6f42c1; /* Color oscuro para el sidebar */
+  background-color: #6f42c1;
   position: fixed;
   top: 0;
-  left: -250px; /* Ocultar sidebar por defecto */
-  transition: left 0.3s; /* Transición suave para mostrar/ocultar */
-  padding-top: 70px; /* Ajuste para el navbar */
-  z-index: 999; /* Asegura que el sidebar esté por debajo del navbar */
-}
-
-.sidebar.show {
-  left: 0; /* Mostrar sidebar */
+  left: 0;
+  padding-top: 70px;
+  z-index: 999;
 }
 
 .sidebar h4 {
@@ -74,24 +56,20 @@ body {
 }
 
 .sidebar .nav-link:hover {
-  background-color: #495057; /* Color de fondo al pasar el mouse */
+  background-color: #495057;
   border-radius: 5px;
 }
 
-/* Contenido Principal */
+/* 🔹 Contenido Principal */
 .content {
-  margin-left: 0; /* Sin margen en móviles */
+  margin-left: 250px;
   padding: 20px;
-  padding-top: 70px; /* Ajuste para el navbar */
-  transition: margin-left 0.3s; /* Transición suave para el margen */
+  padding-top: 70px;
+  transition: margin-left 0.3s;
+  width: calc(100% - 250px);
 }
 
-.content.shift {
-  margin-left: 250px; /* Desplazar contenido cuando el sidebar está visible */
-  width: calc(100% - 250px); /* Reducir el ancho del contenido */
-}
-
-/* Tarjetas */
+/* 🔹 Estilos para tarjetas */
 .card {
   background: white;
   border-radius: 10px;
@@ -111,35 +89,57 @@ body {
   color: #007bff;
 }
 
-/* Media Queries */
+/* 🔹 Media Queries */
 @media (max-width: 768px) {
+  .navbar {
+    display: flex; /* Mostrar navbar en móviles */
+  }
+
   .sidebar {
     width: 100%; /* Ocupar toda la pantalla en móviles */
     left: -100%; /* Ocultar sidebar por defecto */
+    position: fixed;
+    transition: left 0.3s;
   }
 
   .sidebar.show {
-    left: 0; /* Mostrar sidebar en móviles */
+    left: 0; /* Mostrar sidebar cuando está activo */
   }
 
   .content {
-    margin-left: 0; /* Sin margen en móviles */
-    width: 100%; /* Ancho completo en móviles */
+    margin-left: 0;
+    width: 100%;
   }
 }
 
-
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .sidebar {
-    left: 0; /* Mostrar sidebar en pantallas grandes */
+    left: 0; /* Sidebar siempre visible en escritorio */
   }
 
   .content {
-    margin-left: 250px; /* Desplazar contenido en pantallas grandes */
-    width: calc(100% - 250px); /* Reducir el ancho del contenido */
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  .navbar {
+    display: none; /* Ocultar navbar en escritorio */
   }
 
   .navbar-toggler {
-    display: none; /* Ocultar botón en pantallas grandes */
+    display: none; /* Ocultar botón hamburguesa en escritorio */
   }
+}
+ /* 🔹 Estilos para centrar el logo */
+ .logo-container {
+  display: flex;  /* Usa flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Asegura que la imagen esté arriba del título */
+  margin-bottom: 10px; /* Espacio entre el logo y el título */
+}
+
+.logo-container img {
+  width: 100px;  /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
 }
