@@ -1,82 +1,130 @@
-/* Estilos para el formulario de registro de producto */
-.form-registro {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgb(155, 41, 41);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Estilos personalizados */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #6f42c1;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 🔹 Menú hamburguesa (oculto en escritorio) */
+.navbar-toggler {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  display: none; /* Se oculta por defecto */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #6f42c1;
+  position: fixed;
+  top: 0;
+  left: 0; /* Siempre visible en escritorio */
+  padding-top: 70px;
+  z-index: 999;
+}
+
+.sidebar h4 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+/* Contenido Principal */
+.content {
+  margin-left: 250px; /* Se ajusta para escritorio */
+  padding: 20px;
+  padding-top: 70px;
+  transition: margin-left 0.3s;
+}
+
+/* Formulario */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón */
+.btn-primary {
+  background-color: #6f42c1;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #5a3790;
+}
+
+/* 🔹 Configuración para móviles */
+@media (max-width: 1024px) {
+  .navbar-toggler {
+    display: block; /* Se muestra el botón hamburguesa en móviles */
   }
-  
-  .form-group {
-    margin-bottom: 20px;
+
+  .sidebar {
+    width: 100%; /* Sidebar ocupa toda la pantalla */
+    left: -100%; /* Oculto por defecto en móviles */
+    transition: left 0.3s;
   }
-  
-  .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
+
+  .sidebar.show {
+    left: 0; /* Se muestra cuando se activa */
   }
-  
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+
+  .content {
+    margin-left: 0;
   }
-  
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    border-color: #6f42c1; /* Color morado */
-    outline: none;
+}
+
+/* 🔹 Configuración para escritorio */
+@media (min-width: 1025px) {
+  .navbar-toggler {
+    display: none; /* Se oculta el botón hamburguesa en escritorio */
   }
-  
-  .form-group textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
+
+  .sidebar {
+    left: 0; /* Sidebar siempre visible */
+    width: 250px; /* Tamaño fijo */
   }
-  
-  .form-group button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #28a745; /* Verde */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+
+  .content {
+    margin-left: 250px; /* Se mantiene desplazado */
   }
-  
-  .form-group button:hover {
-    background-color: #218838; /* Verde más oscuro */
-    transform: translateY(-2px); /* Efecto de elevación */
-  }
-  
-  .form-group button:active {
-    transform: translateY(0); /* Efecto de presionado */
-  }
-  
-  /* Media Queries para el formulario */
-  @media (max-width: 768px) {
-    .form-registro {
-      padding: 15px;
-    }
-  
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      font-size: 14px;
-      padding: 8px;
-    }
-  
-    .form-group button {
-      font-size: 14px;
-      padding: 10px;
-    }
-  }
+}

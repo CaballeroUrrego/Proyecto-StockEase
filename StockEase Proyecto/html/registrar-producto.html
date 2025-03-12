@@ -42,7 +42,9 @@
             <a class="nav-link" href="#"><i class="fas fa-search"></i> Consultar Pedido</a></li> <!-- Opción: Consultar Pedido -->
             <a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Generar Reporte</a></li> <!-- Opción: Generar Reporte -->
             <a class="nav-link" href="#"><i class="fas fa-dollar-sign"></i> Actualizar Precios</a></li> <!-- Opción: Actualizar Precios -->
-            <a class="nav-link" href="#"><i class="fas fa-address-book"></i> Contactos</a></li> <!-- Opción: Contactos -->
+            <a class="nav-link" href="#"><i class="fas fa-address-book"></i> Contactos</a></li>
+            <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i> Configuracion</a></li>
+            <a class="nav-link" href="/html/Inicio de seccion.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sección</a></li> 
         </ul>
     </div>
 
@@ -93,26 +95,6 @@
    
   
     <!-- Script para manejar la interacción del menú lateral y mostrar el nombre del usuario -->
-    <script>
-        // Obtener elementos del DOM
-        const toggleSidebar = document.getElementById('toggleSidebar'); // Botón para mostrar/ocultar el menú
-        const sidebar = document.getElementById('sidebar'); // Menú lateral
-        const content = document.getElementById('content'); // Contenido principal
-        const nombreUsuario = document.getElementById('nombreUsuario'); // Elemento para mostrar el nombre del usuario
-
-        // Mostrar/ocultar el menú lateral al hacer clic en el botón
-        toggleSidebar.addEventListener('click', () => {
-            sidebar.classList.toggle('show'); // Alternar la clase 'show' en el menú
-            content.classList.toggle('shift'); // Alternar la clase 'shift' en el contenido
-        });
-
-        // Cargar el nombre del usuario desde el almacenamiento local al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            const nombre = localStorage.getItem('nombreUsuario'); // Obtener el nombre del usuario
-            if (nombre) {
-                nombreUsuario.textContent = nombre; // Mostrar el nombre en el menú lateral
-            }
-        });
-    </script>
+    <script src="/assents/js/sidebar.js"></script>
 </body>
 </html>
