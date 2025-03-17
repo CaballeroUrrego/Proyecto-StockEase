@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Precios</title>
+    <link rel="icon" href="/assents/logo/LogoStockEase.svg" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/pruebas/consultar.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">Actualizar Precios</div>
+        <button class="navbar-toggler" id="toggleSidebar" title="Toggle Sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="text-center mb-4">
+            <img src="/assents/image/perfil.png" alt="Perfil" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <div id="nombreUsuario" class="mt-2"></div>
+        </div>
+        <ul>
+            <a class="nav-link" href="/html/empleado.html"><i class="fas fa-home"></i> Inicio</a>
+            <a class="nav-link" href="/consultar-inventario.html"><i class="fas fa-box"></i> Consultar Inventario</a>
+            <a class="nav-link" href="/html/registrar-producto.html"><i class="fas fa-plus"></i> Registrar Producto</a>
+            <a class="nav-link" href="/html/consultar-pedido.html"><i class="fas fa-search"></i> Consultar Pedido</a>
+            <a class="nav-link active" href="#"><i class="fas fa-dollar-sign"></i> Actualizar Precios</a>
+            <a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Generar Reporte</a>
+            <a class="nav-link" href="#"><i class="fas fa-address-book"></i> Contactos</a>
+            <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
+            <a class="nav-link" href="/html/Inicio de seccion.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a>
+        </ul>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="content" id="content">
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Actualizar Precios</h1>
+
+            <!-- Barra de búsqueda -->
+            <div class="search-bar mb-4">
+                <input type="text" id="buscarProducto" class="form-control" placeholder="Buscar producto...">
+            </div>
+
+            <!-- Tabla de Productos -->
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead class="table-header">
+                        <tr>
+                            <th>ID Producto</th>
+                            <th>Nombre</th>
+                            <th>Precio Actual</th>
+                            <th>Nuevo Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaProductos">
+                        <!-- Los productos se cargarán dinámicamente con JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/assents/js/sidebar.js"></script>
+    <script src="/assents/js/actualizar-precios.js"></script>
+</body>
+</html>
