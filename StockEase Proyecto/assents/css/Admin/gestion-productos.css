@@ -1,0 +1,154 @@
+/* 🔹 Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Navbar */
+.navbar {
+    background-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* 🔹 Botón del Menú Hamburguesa */
+.navbar-toggler {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* 🔹 Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #6f42c1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    z-index: 999;
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* 🔹 Contenido Principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    padding-top: 70px;
+    width: calc(100% - 250px);
+}
+
+/* 🔹 Tabla de Productos */
+.table-responsive {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    white-space: nowrap; /* Evita que el contenido de las celdas se divida */
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+/* 🔹 Encabezado de la Tabla */
+.table-header {
+    background-color: #6f42c1;
+    color: white;
+}
+
+/* 🔹 Estilos para los botones de acciones */
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 14px;
+    margin: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔹 Estilos para centrar el logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.logo-inventario {
+    width: 120px;
+    height: auto;
+}
+
+/* 🔹 Responsividad */
+@media (max-width: 768px) {
+    /* Mostrar la barra de navegación en móviles */
+    .navbar {
+        display: flex;
+    }
+
+    /* Sidebar oculto por defecto en móviles */
+    .sidebar {
+        width: 100%;
+        left: -100%;
+        transition: left 0.3s;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    /* Ajustar el contenido */
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Permitir que la tabla se desplace */
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    /* Ajustar los botones de acción */
+    .table td .btn-sm {
+        font-size: 14px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+
+   
+}

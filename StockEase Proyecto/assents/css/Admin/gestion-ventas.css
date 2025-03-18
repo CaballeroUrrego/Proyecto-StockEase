@@ -1,0 +1,189 @@
+/* 🔹 Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Navbar (solo en móviles) */
+.navbar {
+    background-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+    display: flex; /* Asegura que el navbar se muestre en móviles */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* 🔹 Botón del menú hamburguesa */
+.navbar-toggler {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* 🔹 Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #6f42c1;
+    position: fixed;
+    top: 0;
+    left: -250px;  /* Se oculta en móviles */
+    padding-top: 70px;
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+}
+
+/* 🔹 Mostrar Sidebar cuando está activo */
+.sidebar.show {
+    left: 0;
+}
+
+/* 🔹 Estilos de los enlaces del Sidebar */
+.sidebar .nav-link {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* 🔹 Contenido Principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    padding-top: 70px;
+    transition: margin-left 0.3s;
+    width: calc(100% - 250px);
+}
+
+/* 🔹 Estilos para tarjetas */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Tabla de movimientos */
+.table-responsive {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+/* 🔹 Encabezado de la tabla */
+.table-header {
+    background-color: #6f42c1;
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+/* 🔹 Estilos para centrar el logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.logo-container img {
+    width: 100px;
+    height: auto;
+}
+
+/* 🔹 RESPONSIVIDAD - Corrección del menú hamburguesa */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex; /* Asegura que el navbar aparezca */
+    }
+
+    .sidebar {
+        width: 100%;
+        left: -100%;
+        position: fixed;
+        transition: left 0.3s;
+    }
+
+    .sidebar.show {
+        left: 0; /* Se muestra en móviles */
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* 🔹 Sidebar siempre visible en escritorio */
+@media (min-width: 769px) {
+    .sidebar {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+/* 🔹 Ajuste del logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.logo-inventario {
+    width: 120px;
+    height: auto;
+}

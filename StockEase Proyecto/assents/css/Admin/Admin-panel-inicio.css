@@ -1,0 +1,198 @@
+/* 🔹 Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 🔹 Navbar (solo en móviles) */
+  .navbar {
+    background-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+    display: none; /* Ocultar en escritorio */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* 🔹 Botón del menú hamburguesa */
+  .navbar-toggler {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* 🔹 Sidebar (siempre visible en escritorio) */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #6f42c1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    z-index: 999;
+  }
+  
+  .sidebar h4 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .nav-link {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+  }
+  
+  /* 🔹 Contenido Principal */
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+    padding-top: 70px;
+    transition: margin-left 0.3s;
+    width: calc(100% - 250px);
+  }
+  
+  /* 🔹 Estilos para tarjetas */
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 2.5rem;
+    color: #007bff;
+  }
+  
+  /* 🔹 Tabla de movimientos */
+  .table-responsive {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+  }
+  
+  /* 🔹 Encabezado de la tabla */
+  .table-header {
+    background-color: #6f42c1;
+    color: white;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* 🔹 Estilos para centrar el logo */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .logo-container img {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* 🔹 Responsividad */
+  @media (max-width: 768px) {
+    .navbar {
+      display: flex; /* Mostrar navbar en móviles */
+    }
+  
+    .sidebar {
+      width: 100%;
+      left: -100%;
+      position: fixed;
+      transition: left 0.3s;
+    }
+  
+    .sidebar.show {
+      left: 0;
+    }
+  
+    .content {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .sidebar {
+      left: 0; /* Sidebar siempre visible en escritorio */
+    }
+  
+    .content {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+    }
+  
+    .navbar {
+      display: none; /* Ocultar navbar en escritorio */
+    }
+  
+    .navbar-toggler {
+      display: none; /* Ocultar botón hamburguesa en escritorio */
+    }
+  }
+ 
+/* 🔹 Contenedor para centrar el logo en el contenido principal */
+.logo-container {
+  display: flex;  /* Activa flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Asegura que la imagen quede sobre el título */
+  margin-bottom: 20px; /* Espacio entre el logo y el título */
+  height: 150px; /* Ajusta la altura del contenedor */
+}
+
+/* 🔹 Ajuste de tamaño del logo */
+.logo-inventario {
+  width: 120px;  /* Ajusta el tamaño del logo */
+  height: auto;  /* Mantiene la proporción */
+}
+
+

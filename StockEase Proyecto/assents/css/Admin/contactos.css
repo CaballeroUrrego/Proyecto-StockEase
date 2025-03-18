@@ -1,0 +1,139 @@
+/* 🔹 Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Navbar (solo en móviles) */
+.navbar {
+    background-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* 🔹 Botón del Menú Hamburguesa */
+.navbar-toggler {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* 🔹 Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #6f42c1;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    padding-top: 70px;
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* 🔹 Contenido Principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    padding-top: 70px;
+    width: calc(100% - 250px);
+}
+
+/* 🔹 Tabla de Contactos */
+.table-responsive {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+/* 🔹 Encabezado de la Tabla */
+.table-header {
+    background-color: #6f42c1;
+    color: white;
+}
+
+/* 🔹 Botones de acción */
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 14px;
+    margin: 2px;
+}
+
+/* 🔹 Responsividad */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+    }
+
+    .sidebar {
+        width: 100%;
+        left: -100%;
+        transition: left 0.3s;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* 🔹 Sidebar siempre visible en escritorio */
+@media (min-width: 769px) {
+    .sidebar {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}

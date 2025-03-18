@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Usuarios</title>
+    <link rel="icon" href="/assents/logo/LogoStockEase.svg" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assents/css/Admin/gestion-usuarios.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-brand">Gestión de Usuarios</div>
+      <button class="navbar-toggler" id="toggleSidebar" title="Toggle Sidebar">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="text-center mb-4">
+        <img
+          src="/assents/image/perfil.png"
+          alt="Perfil"
+          class="img-fluid rounded-circle"
+          style="width: 100px; height: 100px"
+        />
+        <div id="nombreUsuario" class="mt-2">Administrador</div>
+      </div>
+      <ul>
+        <a class="nav-link" href="/html/Admin/Administrador-panel.html"
+          ><i class="fas fa-home"></i> Inicio</a
+        >
+        <a class="nav-link active" href="/html/usuarios.html"
+          ><i class="fas fa-users"></i> Gestión de Usuarios</a
+        >
+        <a class="nav-link" href="/consultar-inventario.html"
+          ><i class="fas fa-box-open"></i> Gestión de Productos</a
+        >
+        <a class="nav-link" href="/html/registrar-producto.html"
+          ><i class="fas fa-shopping-cart"></i> Gestión de Ventas</a
+        >
+        <a class="nav-link" href="/html/contactos.html"
+          ><i class="fas fa-address-book"></i> Contactos</a
+        >
+        <a class="nav-link" href="#"
+          ><i class="fas fa-cogs"></i> Configuración</a
+        >
+        <a class="nav-link" href="/html/Inicio-de-seccion.html"
+          ><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a
+        >
+      </ul>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="content" id="content">
+      <div class="container mt-5">
+        <!-- 🔹 Imagen completamente centrada -->
+        <div class="text-center">
+          <img
+            src="/assents/logo/LogoStockEase.svg"
+            alt="Logo"
+            class="logo-inventario"
+          />
+        </div>
+
+        <h1 class="text-center mb-4">Gestión de Usuarios</h1>
+
+        <!-- Barra de búsqueda -->
+        <div class="row mb-4">
+          <div class="col-md-6 offset-md-3">
+            <input
+              type="text"
+              id="buscarUsuario"
+              class="form-control"
+              placeholder="Buscar usuario..."
+            />
+          </div>
+        </div>
+
+        <!-- Tabla de Usuarios -->
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered">
+            <thead class="table-header">
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo Electrónico</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+              <tr>
+                <td>1</td>
+                <td>Juan Pérez</td>
+                <td>juan@example.com</td>
+                <td>Empleado</td>
+                <td>
+                  <button class="btn btn-success btn-sm">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>María López</td>
+                <td>maria@example.com</td>
+                <td>Empleado</td>
+                <td>
+                  <button class="btn btn-success btn-sm">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/assents/js/sidebar.js"></script>
+    <script src="/assents/js/gestion-usuarios.js"></script>
+  </body>
+</html>
