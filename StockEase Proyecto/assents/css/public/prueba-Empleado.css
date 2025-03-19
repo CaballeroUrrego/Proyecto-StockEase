@@ -1,14 +1,14 @@
 /* Estilos personalizados */
 body {
-  font-family: Arial, sans-serif; /* Fuente sans-serif para el cuerpo */
-  background-color: #f8f9fa; /* Color de fondo claro */
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
   margin: 0;
   padding: 0;
 }
 
 /* 🔹 Navbar (solo en móviles) */
 .navbar {
-  background-color: #6f42c1; /* Color morado */
+  background-color: #6f42c1;
   color: white;
   padding: 10px 20px;
   display: none; /* Ocultar en escritorio */
@@ -20,7 +20,12 @@ body {
   z-index: 1000;
 }
 
-/* Botón dentro del navbar */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 🔹 Menú hamburguesa (solo en móviles) */
 .navbar-toggler {
   background: none;
   border: none;
@@ -28,6 +33,7 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 1001;
+  display: none; /* Oculto en escritorio */
 }
 
 /* 🔹 Sidebar (siempre visible en escritorio) */
@@ -66,62 +72,53 @@ body {
   padding: 20px;
   padding-top: 70px;
   transition: margin-left 0.3s;
-  width: calc(100% - 250px);
 }
 
-/* 🔹 Estilos para tarjetas */
-.card {
+/* 🔹 Formulario */
+form {
   background: white;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
 }
 
-.card-title {
-  font-size: 1.25rem;
-  color: #333;
+/* 🔹 Botón */
+.btn-primary {
+  background-color: #6f42c1;
+  border: none;
 }
 
-.card-text {
-  font-size: 2.5rem;
-  color: #007bff;
+.btn-primary:hover {
+  background-color: #5a3790;
 }
 
-/* 🔹 Media Queries */
-@media (max-width: 768px) {
+/* 🔹 Configuración para móviles */
+@media (max-width: 1024px) {
   .navbar {
     display: flex; /* Mostrar navbar en móviles */
   }
 
+  .navbar-toggler {
+    display: block; /* Se muestra el botón hamburguesa en móviles */
+  }
+
   .sidebar {
-    width: 100%; /* Ocupar toda la pantalla en móviles */
-    left: -100%; /* Ocultar sidebar por defecto */
-    position: fixed;
+    width: 100%; /* Sidebar ocupa toda la pantalla */
+    left: -100%; /* Oculto por defecto en móviles */
     transition: left 0.3s;
   }
 
   .sidebar.show {
-    left: 0; /* Mostrar sidebar cuando está activo */
+    left: 0; /* Se muestra cuando se activa */
   }
 
   .content {
     margin-left: 0;
-    width: 100%;
   }
 }
 
-@media (min-width: 769px) {
-  .sidebar {
-    left: 0; /* Sidebar siempre visible en escritorio */
-  }
-
-  .content {
-    margin-left: 250px;
-    width: calc(100% - 250px);
-  }
-
+/* 🔹 Configuración para escritorio */
+@media (min-width: 1025px) {
   .navbar {
     display: none; /* Ocultar navbar en escritorio */
   }
@@ -129,10 +126,20 @@ body {
   .navbar-toggler {
     display: none; /* Ocultar botón hamburguesa en escritorio */
   }
+
+  .sidebar {
+    left: 0; /* Sidebar siempre visible */
+    width: 250px; /* Tamaño fijo */
+  }
+
+  .content {
+    margin-left: 250px; /* Se mantiene desplazado */
+  }
 }
- /* 🔹 Estilos para centrar el logo */
- .logo-container {
-  display: flex;  /* Usa flexbox para centrar */
+
+/* 🔹 Estilos para centrar el logo */
+.logo-container {
+  display: flex; /* Usa flexbox para centrar */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   flex-direction: column; /* Asegura que la imagen esté arriba del título */
@@ -140,6 +147,6 @@ body {
 }
 
 .logo-container img {
-  width: 100px;  /* Ajusta el tamaño del logo */
+  width: 100px; /* Ajusta el tamaño del logo */
   height: auto; /* Mantiene la proporción */
 }

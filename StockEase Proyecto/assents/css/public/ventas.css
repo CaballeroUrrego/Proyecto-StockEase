@@ -1,0 +1,186 @@
+/* 🔹 Variables CSS */
+:root {
+  --primary-color: #6f42c1;
+  --secondary-color: #495057;
+  --background-light: #f8f9fa;
+  --text-light: white;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Estilos Generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-light);
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔹 Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 10px 20px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* 🔹 Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 70px;
+  z-index: 999;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar .nav-link {
+  color: var(--text-light);
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s, border-radius 0.2s;
+}
+
+.sidebar .nav-link:hover {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+/* 🔹 Contenido Principal */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  padding-top: 70px;
+  transition: margin-left 0.3s ease-in-out;
+  width: calc(100% - 250px);
+}
+
+/* 🔹 Estilos para estadísticas */
+.stat-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
+  text-align: center;
+}
+
+.stat-box i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* 🔹 Gráfico */
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 🔹 Tabla */
+.table-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* 🔹 Botones */
+.btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.btn i {
+  margin-right: 5px;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* 🔹 Estilos de la sección de botones */
+.d-flex {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 🔹 Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 100%;
+    left: -100%;
+    position: fixed;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+

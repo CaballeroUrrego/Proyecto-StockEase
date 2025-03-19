@@ -1,75 +1,75 @@
 /* Fondo y tipografía */
 body {
-    background: linear-gradient(to top, #ffffff, #f3f4f6);
-    font-family: 'Arial', sans-serif;
-    color: #333;
+  background: linear-gradient(to top, #ffffff, #f3f4f6);
+  font-family: "Arial", sans-serif;
+  color: #333;
 }
 
 /* Estilos de la tarjeta */
 .card {
-    background: #fff;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Títulos */
-h1, h2 {
-    color: #7e57c2;
-    font-weight: bold;
+h1,
+h2 {
+  color: #7e57c2;
+  font-weight: bold;
 }
 
 /* Inputs */
 .form-control {
-    border-radius: 10px;
-    border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
 /* Botón principal */
 .btn-primary {
-    background-color: #7e57c2;
-    border: none;
-    border-radius: 50px;
+  background-color: #7e57c2;
+  border: none;
+  border-radius: 50px;
 }
 
 .btn-primary:hover {
-    background-color: #5e3fa4;
+  background-color: #5e3fa4;
 }
 
 /* Botones de roles */
 .role-btn {
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    margin: 0.2rem;
-    padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin: 0.2rem;
+  padding: 0.5rem 1rem;
 }
 
 .role-btn:hover {
-    background-color: #d9d9d9;
+  background-color: #d9d9d9;
 }
-
 
 /* Estilo para el botón seleccionado */
 .btn-selected-admin {
-    background-color: #7e57c2; /* Color para Administrador */
-    color: white;
-  }
-  
-  .btn-selected-empleado {
-    background-color: #7e57c2; /* Color para Empleado */
-    color: white;
-  }
-  
-  .btn-selected-proveedor {
-    background-color: #7e57c2; /* Color para Proveedor */
-    color: white;
-  }
+  background-color: #7e57c2; /* Color para Administrador */
+  color: white;
+}
+
+.btn-selected-empleado {
+  background-color: #7e57c2; /* Color para Empleado */
+  color: white;
+}
+
+.btn-selected-proveedor {
+  background-color: #7e57c2; /* Color para Proveedor */
+  color: white;
+}
 
 /* Media query para dispositivos móviles */
 @media (max-width: 600px) {
-    .role-btn {
-        padding: 0.3rem 0.8rem;
-        font-size: 0.8rem;
-    }
+  .role-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
 }

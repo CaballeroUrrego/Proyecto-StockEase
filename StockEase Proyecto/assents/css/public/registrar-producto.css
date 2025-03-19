@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos generales para el cuerpo de la página */
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-/* 🔹 Navbar */
+/* 🔹 Navbar (solo en móviles) */
 .navbar {
   background-color: #6f42c1;
   color: white;
@@ -20,6 +20,11 @@ body {
   z-index: 1000;
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .navbar-toggler {
   background: none;
   border: none;
@@ -29,7 +34,7 @@ body {
   z-index: 1001;
 }
 
-/* 🔹 Sidebar */
+/* 🔹 Sidebar (siempre visible en escritorio) */
 .sidebar {
   width: 250px;
   height: 100vh;
@@ -39,6 +44,12 @@ body {
   left: 0;
   padding-top: 70px;
   z-index: 999;
+}
+
+.sidebar h4 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .sidebar .nav-link {
@@ -62,35 +73,62 @@ body {
   width: calc(100% - 250px);
 }
 
-/* 🔹 Estilos para la barra de búsqueda */
-.search-bar {
-  border-radius: 25px;
-  border: 1px solid #6f42c1;
-  padding: 10px 15px;
-  font-size: 16px;
+/* 🔹 Tabla de Inventario */
+.table-responsive {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 🔹 Tabla */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #333;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+
+/* 🔹 Encabezado de la tabla */
 .table-header {
   background-color: #6f42c1;
   color: white;
 }
 
-/* 🔹 Responsividad */
+.table-header th {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* 🔹 Efecto hover en las filas */
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+/* 🔹 Media Queries */
 @media (max-width: 768px) {
   .navbar {
     display: flex; /* Mostrar navbar en móviles */
   }
 
   .sidebar {
-    width: 100%;
-    left: -100%;
+    width: 100%; /* Ocupar toda la pantalla en móviles */
+    left: -100%; /* Ocultar sidebar por defecto */
     position: fixed;
     transition: left 0.3s;
   }
 
   .sidebar.show {
-    left: 0;
+    left: 0; /* Mostrar sidebar cuando está activo */
   }
 
   .content {
@@ -99,9 +137,27 @@ body {
   }
 }
 
- /* 🔹 Estilos para centrar el logo */
- .logo-container {
-  display: flex;  /* Usa flexbox para centrar */
+@media (min-width: 769px) {
+  .sidebar {
+    left: 0; /* Sidebar siempre visible en escritorio */
+  }
+
+  .content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  .navbar {
+    display: none; /* Ocultar navbar en escritorio */
+  }
+
+  .navbar-toggler {
+    display: none; /* Ocultar botón hamburguesa en escritorio */
+  }
+}
+/* 🔹 Estilos para centrar el logo */
+.logo-container {
+  display: flex; /* Usa flexbox para centrar */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   flex-direction: column; /* Asegura que la imagen esté arriba del título */
@@ -109,6 +165,6 @@ body {
 }
 
 .logo-container img {
-  width: 100px;  /* Ajusta el tamaño del logo */
+  width: 100px; /* Ajusta el tamaño del logo */
   height: auto; /* Mantiene la proporción */
 }

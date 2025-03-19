@@ -1,119 +1,119 @@
 /* 🔹 Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
 /* 🔹 Navbar */
 .navbar {
-    background-color: #6f42c1;
-    color: white;
-    padding: 10px 20px;
-    display: none; /* Ocultar en escritorio */
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: #6f42c1;
+  color: white;
+  padding: 10px 20px;
+  display: none; /* Ocultar en escritorio */
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar-toggler {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1001;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 /* 🔹 Sidebar */
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #6f42c1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 70px;
-    z-index: 999;
+  width: 250px;
+  height: 100vh;
+  background-color: #6f42c1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 70px;
+  z-index: 999;
 }
 
 .sidebar .nav-link {
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
 }
 
 .sidebar .nav-link:hover {
-    background-color: #495057;
-    border-radius: 5px;
+  background-color: #495057;
+  border-radius: 5px;
 }
 
 .sidebar .nav-link.active {
-    background-color: #5a33a2;
-    border-radius: 5px;
+  background-color: #5a33a2;
+  border-radius: 5px;
 }
 
 /* 🔹 Contenido Principal */
 .content {
-    margin-left: 250px;
-    padding: 20px;
-    padding-top: 70px;
-    transition: margin-left 0.3s;
-    width: calc(100% - 250px);
+  margin-left: 250px;
+  padding: 20px;
+  padding-top: 70px;
+  transition: margin-left 0.3s;
+  width: calc(100% - 250px);
 }
 
 /* 🔹 Estilos para la barra de búsqueda */
 .search-bar {
-    border-radius: 25px;
-    border: 1px solid #6f42c1;
-    padding: 10px 15px;
-    font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #6f42c1;
+  padding: 10px 15px;
+  font-size: 16px;
 }
 
 /* 🔹 Tabla */
 .table-header {
-    background-color: #6f42c1;
-    color: white;
+  background-color: #6f42c1;
+  color: white;
 }
 
 /* 🔹 Responsividad */
 @media (max-width: 768px) {
-    .navbar {
-        display: flex; /* Mostrar navbar en móviles */
-    }
+  .navbar {
+    display: flex; /* Mostrar navbar en móviles */
+  }
 
-    .sidebar {
-        width: 100%;
-        left: -100%;
-        position: fixed;
-        transition: left 0.3s;
-    }
+  .sidebar {
+    width: 100%;
+    left: -100%;
+    position: fixed;
+    transition: left 0.3s;
+  }
 
-    .sidebar.show {
-        left: 0;
-    }
+  .sidebar.show {
+    left: 0;
+  }
 
-    .content {
-        margin-left: 0;
-        width: 100%;
-    }
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 /* 🔹 Estilos para centrar el logo */
 .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .logo-container img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }

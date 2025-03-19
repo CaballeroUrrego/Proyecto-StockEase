@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8" />
+    <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hace que la página sea responsive -->
+    <title>Registrar Producto</title>
+    <!-- Título de la página -->
+    <link rel="icon" href="/assents/logo/LogoStockEase.svg" />
+    <!-- Ícono de la pestaña del navegador -->
+
+    <!-- Enlaces a hojas de estilo externas -->
+    <!-- Bootstrap CSS: Framework para estilos y componentes -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome CSS: Librería de íconos -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS: Archivo de estilos personalizados -->
+    <link rel="stylesheet" href="/assents/css/public/registrar-producto.css" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+      <div class="navbar-brand">Registrar Producto</div>
+      <!-- Título en la barra de navegación -->
+      <!-- Botón para mostrar/ocultar el menú lateral en dispositivos móviles -->
+      <button class="navbar-toggler" id="toggleSidebar" title="Toggle Sidebar">
+        <i class="fas fa-bars"></i>
+        <!-- Ícono de menú hamburguesa -->
+      </button>
+    </nav>
+
+    <!-- Menú lateral (Sidebar) -->
+    <div class="sidebar" id="sidebar">
+      <h4>Menú</h4>
+      <!-- Título del menú -->
+      <div class="text-center mb-4">
+        <!-- Imagen de perfil del usuario -->
+        <img
+          src="/assents/image/perfil.png"
+          alt="Perfil"
+          class="img-fluid rounded-circle"
+          style="width: 100px; height: 100px"
+        />
+        <!-- Nombre del usuario (se llena dinámicamente con JavaScript) -->
+        <div id="nombreUsuario" class="mt-2"></div>
+      </div>
+      <!-- Lista de opciones del menú -->
+      <ul>
+        <a class="nav-link" href="/html/Admin/Administrador-panel.html">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a class="nav-link" href="/html/Admin/gestion de usuarios.html">
+          <i class="fas fa-users"></i> Gestión de Usuarios
+        </a>
+        <a class="nav-link" href="/html/Admin/gestion de productos.html">
+          <i class="fas fa-box-open"></i> Gestión de Productos
+        </a>
+        <a class="nav-link" href="/html/Admin/gestion de ventas.html">
+          <i class="fas fa-shopping-cart"></i> Gestión de Ventas
+        </a>
+        <a class="nav-link" href="/html/Admin/admin-contactos.html">
+          <i class="fas fa-address-book"></i> Contactos
+        </a>
+
+        <a class="nav-link" href="#">
+          <i class="fas fa-cogs"></i> Configuración
+        </a>
+        <a class="nav-link" href="/html/Inicio-de-seccion.html">
+          <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+        </a>
+      </ul>
+    </div>
+
+    <!-- Contenido principal de la página -->
+    <div class="content" id="content">
+      <div class="container mt-5">
+        <!-- 🔹 Imagen completamente centrada -->
+        <div class="text-center">
+          <img
+            src="/assents/logo/LogoStockEase.svg"
+            alt="Logo"
+            class="logo-inventario"
+          />
+        </div>
+
+        <h1 class="text-center mb-4">Registrar Producto</h1>
+        <!-- Título del contenido -->
+        <!-- Formulario para registrar un producto -->
+        <form>
+          <!-- Campo: Nombre del Producto -->
+          <div class="mb-3">
+            <label for="nombreProducto" class="form-label"
+              >Nombre del Producto</label
+            >
+            <input
+              type="text"
+              id="nombreProducto"
+              class="form-control"
+              placeholder="Nombre del producto"
+            />
+          </div>
+          <!-- Campo: Categoría del Producto -->
+          <div class="mb-3">
+            <label for="categoriaProducto" class="form-label">Categoría</label>
+            <input
+              type="text"
+              id="categoriaProducto"
+              class="form-control"
+              placeholder="Categoría del producto"
+            />
+          </div>
+          <!-- Campo: Stock del Producto -->
+          <div class="mb-3">
+            <label for="stockProducto" class="form-label">Stock</label>
+            <input
+              type="number"
+              id="stockProducto"
+              class="form-control"
+              placeholder="Cantidad en stock"
+            />
+          </div>
+          <!-- Campo: Precio Unitario del Producto -->
+          <div class="mb-3">
+            <label for="precioProducto" class="form-label"
+              >Precio Unitario</label
+            >
+            <input
+              type="number"
+              id="precioProducto"
+              class="form-control"
+              placeholder="Precio unitario"
+            />
+          </div>
+          <!-- Campo: Fecha de Entrada del Producto -->
+          <div class="mb-3">
+            <label for="fechaEntrada" class="form-label"
+              >Fecha de Entrada</label
+            >
+            <input type="date" id="fechaEntrada" class="form-control" />
+          </div>
+          <!-- Botón para enviar el formulario -->
+          <div class="d-grid">
+            <button
+              type="submit"
+              class="btn btn-primary py-2"
+              onclick="registrarProducto(event)"
+            >
+              Registrar Producto
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Enlaces a scripts externos -->
+    <!-- Bootstrap JS: Funcionalidades de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS: Archivo de JavaScript personalizado -->
+
+    <!-- Script para manejar la interacción del menú lateral y mostrar el nombre del usuario -->
+    <script src="/assents/js/sidebar.js"></script>
+  </body>
+</html>

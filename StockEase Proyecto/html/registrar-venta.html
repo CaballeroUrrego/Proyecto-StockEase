@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Venta</title>
+    <link rel="icon" href="/assents/logo/LogoStockEase.svg">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assents/css/public/registrar-producto.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">Registrar Venta</div>
+        <button class="navbar-toggler" id="toggleSidebar" title="Toggle Sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h4>Menú</h4>
+        <div class="text-center mb-4">
+            <img src="/assents/image/perfil.png" alt="Perfil" class="img-fluid rounded-circle" width="100" height="100">
+            <div id="nombreUsuario" class="mt-2">Administrador</div>
+        </div>
+        <ul>
+            <!-- Enlaces de navegación del sidebar -->
+            <a class="nav-link" href="/html/empleado.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <a class="nav-link active" href="/html/consultar-inventario.html"><i class="fas fa-box"></i> Consultar Inventario</a></li>
+            <a class="nav-link" href="/html/registrar-venta.html"><i class="fas fa-plus"></i> Registrar Venta</a></li>
+            <a class="nav-link" href="/html/ventas-mensuales.html"><i class="fas fa-search"></i> Mis ventas Mensuales</a></li>
+            <a class="nav-link" href="/html/Editar-perfil.html"><i class="fa-solid fa-gear"></i> Configuracion</a></li>
+            <a class="nav-link" href="/html/Inicio de seccion.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sección</a></li> 
+          </ul>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="content">
+        <div class="container mt-5">
+            <!-- Imagen centrada -->
+            <div class="text-center mb-4">
+                <img src="/assents/logo/LogoStockEase.svg" alt="Logo" class="logo-inventario">
+            </div>
+
+            <h1 class="text-center mb-4">Registrar Venta</h1>
+
+            <!-- Formulario de Registro de Venta -->
+            <form id="ventaForm">
+                <div class="mb-3">
+                    <label for="producto" class="form-label">Producto</label>
+                    <input type="text" id="producto" class="form-control" placeholder="Nombre del producto" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cantidad" class="form-label">Cantidad</label>
+                    <input type="number" id="cantidad" class="form-control" placeholder="Cantidad vendida" required min="1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="precio" class="form-label">Precio Unitario</label>
+                    <input type="number" id="precio" class="form-control" placeholder="Precio por unidad" required min="0.01" step="0.01">
+                </div>
+
+                <div class="mb-3">
+                    <label for="fechaVenta" class="form-label">Fecha de Venta</label>
+                    <input type="date" id="fechaVenta" class="form-control" required>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Registrar Venta
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/assents/js/sidebar.js"></script>
+    <script src="/assents/js/ventas.js"></script>
+</body>
+</html>

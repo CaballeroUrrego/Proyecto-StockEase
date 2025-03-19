@@ -1,46 +1,201 @@
-/* Estilos globales */
+/* 🔹 Estilos globales */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+  font-family: "Arial", sans-serif; /* Fuente principal */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Color de texto predeterminado */
+  background-color: #f8f9fa; /* Color de fondo */
 }
 
-/* Header */
+/* ==========================
+        HEADER (ENCABEZADO)
+   ========================== */
 #header {
-    background: linear-gradient(to bottom, #7e57c2, #5e3fa4);
-    color: #fff;
-    padding: 5rem 0;
+  background: linear-gradient(
+    to bottom,
+    #6f42c1,
+    #5e3fa4
+  ); /* Degradado morado */
+  color: #fff; /* Texto blanco */
+  padding: 5rem 0;
+  text-align: center;
+}
+
+#header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 #header h1 span {
-    color: #ffca28;
+  color: #ffca28; /* Resaltar "StockEase" en amarillo */
 }
 
-/* Características */
-#features .text-primary {
-    color: #7e57c2 !important;
+/* ==========================
+        BOTONES MEJORADOS
+   ========================== */
+/* 🔹 Contenedor de los botones */
+.button-group {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 15px; /* Espaciado entre botones */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Para que en móviles no se desborden */
 }
 
-/* Testimonios */
+/* 🔹 Estilos para los botones personalizados (compactos y cuadrados) */
+.btn-custom {
+  background-color: #5817d2; /* Color base */
+  color: #fff;
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  padding: 8px 10px; /* Botón más compacto */
+  border-radius: 8px; /* Esquinas ligeramente redondeadas */
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Menos espacio entre icono y texto */
+  border: 2px solid transparent;
+  min-width: 140px; /* Tamaño mínimo para mantener proporción */
+}
+
+/* 🔹 Efecto al pasar el mouse */
+.btn-custom:hover {
+  background-color: #5e3fa4;
+  transform: scale(1.03); /* Animación ligera */
+  border-color: #ffca28; /* Borde resaltado */
+}
+
+/* ==========================
+        CARACTERÍSTICAS
+   ========================== */
+#features {
+  padding: 60px 0;
+  background: #fff;
+}
+
+#features h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 🔹 Diseño de cada característica */
+.feature-box {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-box:hover {
+  transform: scale(1.05); /* Efecto de elevación */
+}
+
+/* 🔹 Íconos de las características */
+.feature-box i {
+  font-size: 3rem;
+  color: #6f42c1;
+  margin-bottom: 15px;
+}
+
+/* ==========================
+        TESTIMONIOS
+   ========================== */
+#testimonials {
+  background: #f1f1f1;
+  padding: 60px 0;
+}
+
+#testimonials h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* 🔹 Caja de cada testimonio */
 .testimonial {
-    background: #fff;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    padding: 1.5rem;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #6f42c1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Formulario */
-form .form-control {
-    border-radius: 5px;
+.testimonial:hover {
+  transform: scale(1.03);
 }
 
-/* Botones */
-.btn-primary {
-    background-color: #7e57c2;
-    border: none;
-    border-radius: 30px;
+/* ==========================
+        FORMULARIO DE CONTACTO
+   ========================== */
+#contact {
+  background: #fff;
+  padding: 60px 0;
 }
 
-.btn-primary:hover {
-    background-color: #5e3fa4;
+#contact h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* 🔹 Estilo de los inputs */
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* 🔹 Efecto al hacer clic en un input */
+.form-control:focus {
+  border-color: #6f42c1;
+  box-shadow: 0 0 5px rgba(111, 66, 193, 0.5);
+}
+
+/* ==========================
+        FOOTER
+   ========================== */
+/*footer {
+    background: #6f42c1;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+/* ==========================
+        RESPONSIVIDAD
+   ========================== */
+@media (max-width: 768px) {
+  #header {
+    padding: 3rem 0;
+  }
+
+  #header h1 {
+    font-size: 2rem;
+  }
+
+  .btn-custom {
+    width: 100%; /* Botones a lo ancho en móviles */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .button-group {
+    flex-direction: column; /* Acomoda los botones en columna */
+    align-items: center;
+  }
+
+  .feature-box {
+    margin-bottom: 20px;
+  }
+
+  .testimonial {
+    text-align: center;
+  }
 }
