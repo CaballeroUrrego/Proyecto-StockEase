@@ -137,3 +137,14 @@ body {
         display: none;
     }
 }
+/* 🔹 Responsividad para Tablas */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto; /* Habilita el desplazamiento horizontal */
+        -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en móviles */
+    }
+
+    .table th, .table td {
+        white-space: nowrap; /* Evita que las celdas se ajusten automáticamente */
+    }
+}
