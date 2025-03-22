@@ -33,6 +33,9 @@
         └── 📁logo
             └── LogoStockEase.svg
             └── Sebastian.jpeg
+    └── 📁database
+        └── BdStock.sql
+        └── Diagrama.png
     └── 📁html
         └── 📁Admin
             └── admin-contactos.html
@@ -40,11 +43,12 @@
             └── Gestion de productos.html
             └── gestion de usuarios.html
             └── gestion de ventas.html
+            └── registrar-producto.html
         └── consultar-inventario.html
         └── Editar-perfil.html
         └── empleado.html
         └── Inicio de seccion.html
-        └── registrar-producto.html
+        └── registrar-venta.html
         └── Registrese.html
         └── ventas-mensuales.html
     └── 📁pruebas
@@ -52,6 +56,7 @@
         └── consultar.css
         └── consuntar-pedidido.html
         └── maquetado.html
+    └── .gitignore
     └── landing.html
     └── README.md
 ```
